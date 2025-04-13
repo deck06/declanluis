@@ -52,8 +52,20 @@
       font-size: 1rem;
       color: #666;
     }
-    .subscribe-button {
+    form {
       margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input[type="text"], input[type="email"] {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      width: 100%;
+    }
+    button {
       padding: 0.75rem 1.5rem;
       background: #00aff0;
       color: white;
@@ -63,7 +75,7 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    .subscribe-button:hover {
+    button:hover {
       background: #0090c5;
     }
   </style>
@@ -75,8 +87,12 @@
   <div class="profile">
     <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1" alt="Profile Image" />
     <h2>@declanluis</h2>
-    <p>Welcome to my exclusive content page. Subscribe for updates, behind-the-scenes, and more!</p>
-    <button class="subscribe-button">Subscribe</button>
+    <p>Welcome to my exclusive content page. Subscribe below for access!</p>
+    <form action="https://formspree.io/f/mnqeqrle" method="POST">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
 </body>
 </html>
